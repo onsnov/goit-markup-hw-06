@@ -355,6 +355,8 @@ ul {
 .form-field textarea {
   margin-bottom: 10px;
   height: 120px;
+  padding-left: 16px;
+  padding-top: 12px;
 }
 
 .form-field input:focus + .input-icon {
@@ -397,13 +399,14 @@ textarea::placeholder {
 }
 .agree-text {
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agree-text:hover,
 .agree-text:focus {
   color: #188ce8;
 }
 
-.form-checkbox {
+. {
   position: relative;
 }
 
@@ -431,11 +434,10 @@ textarea::placeholder {
 }
 
 .submit {
-  display: block ;
+  display: block;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-
 
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -450,8 +452,6 @@ textarea::placeholder {
   width: 200px;
   height: 50px;
   background-color: var(--accent-color);
-
-  
 }
 .visually-hidden {
   width: 1px;
@@ -484,6 +484,77 @@ textarea::placeholder {
 textarea {
   resize: none;
   width: 100%;
+}
+
+.form-subscription {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 216px;
+}
+
+.button.subscription {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.icon-subscription {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+}
+
+.icon-subscription .icon {
+  fill: var(--button-text-color);
+  margin-left: 10px;
+}
+
+.input-subscription {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.subscription-object {
+  display: flex;
+  flex-direction: column;
+  margin-left: 93px;
+}
+
+.subscription-object label {
+  font-style: normal;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--button-text-color);
+  margin-bottom: 20px;
+}
+
+.subscription-object input::placeholder {
+  font-style: normal;
+
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-object input {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* advantages */

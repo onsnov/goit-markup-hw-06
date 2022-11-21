@@ -504,7 +504,25 @@
             </ul>
           </div>
           <div class="footer-subscription">
-            
+            <form  name="form" class="form-subscription">
+              <div class="subscription-object">
+                <label for="subscription">Підпишись на розсилку</label>
+                <input
+                  class="input-subscription"
+                  type="email"
+                  id="subscription"
+                  placeholder="E-mail"
+                />
+              </div>
+              <button type="submit" class="button subscription">
+                <span class="icon-subscription"
+                  >Підписатися
+                  <svg width="24" height="24" class="icon">
+                    <use href="./images/symbol-defs (1).svg#icon-send"></use>
+                  </svg>
+                </span>
+              </button>
+            </form>
           </div>
         </address>
       </div>
@@ -517,14 +535,14 @@
           </svg>
         </button>
 
-        <form action="" name="form" class="form js-speaker-form">
+        <form name="form" js-speaker-form class="form" >
           <p>Залиште свої дані, ми вам передзвонимо</p>
           <div class="form-field">
-            <label name="Ім'я" for="Ім'я">Ім'я</label>
+            <label for="name">Ім'я</label>
             <div class="input-wrapper">
               <input
                 type="text"
-                id="Ім'я"
+                id="name"
                 placeholder="Мар'ян Петрович"
                 required
               />
@@ -535,7 +553,7 @@
           </div>
 
           <div class="form-field">
-            <label name="Телефон" for="phone">Тeлефон</label>
+            <label  for="phone">Тeлефон</label>
             <div class="input-wrapper">
               <input type="tel" id="phone" />
               <svg class="input-icon" width="18" height="18">
@@ -545,7 +563,7 @@
           </div>
 
           <div class="form-field">
-            <label name="Коментар" for="comment">Пошта</label>
+            <label for="comment">Пошта</label>
             <div class="input-wrapper">
               <input type="email" id="comment" />
               <svg class="input-icon" width="18" height="18">
@@ -555,7 +573,7 @@
           </div>
 
           <div class="form-field">
-            <label name="Відгук" for="comments">Коментар</label>
+            <label  for="comments">Коментар</label>
             <textarea
               name="Відгук"
               id="comments"
@@ -573,15 +591,13 @@
               <svg class="agree-icon" width="11" height="8">
                 <use href="./images/symbol-defs (1).svg#icon-check"></use>
               </svg>
-              <span>Погоджуюся з розсилкою та приймаю
-              <a href=""><span class="agree-text">Умови договору</span></a>
+              <span
+                >Погоджуюся з розсилкою та приймаю
+                <a href=""><span class="agree-text">Умови договору</span></a>
               </span>
             </label>
           </div>
-          <button class="submit" type="submit">
-  Відправити
-
-          </button>
+          <button class="submit" type="submit">Відправити</button>
         </form>
         <script>
           (() => {
