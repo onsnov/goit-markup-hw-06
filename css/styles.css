@@ -248,7 +248,8 @@ ul {
 }
 
 .modal {
-  position: relative;
+  padding: 40px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -283,6 +284,11 @@ ul {
   border-radius: 50%;
   background: var(--button-text-color);
   cursor: pointer;
+ 
+}
+
+.icon-modal{
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .close-button:hover .icon-modal {
@@ -363,15 +369,21 @@ ul {
   fill: var(--accent-color);
 }
 
+.form-field input:focus
+ {
+  border: 1px solid #2196F3;
+}
+
 .form-field input,
 .form-field textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--secondary-text-color)
 }
 
 input::placeholder {
@@ -386,7 +398,7 @@ textarea::placeholder {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: rgba(66, 64, 64, 0.5);
 }
 
 .form-field + input {
@@ -396,9 +408,10 @@ textarea::placeholder {
 .agree-checkbox {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .agree-text {
-  color: var(--primary-text-color);
+  color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agree-text:hover,
@@ -452,6 +465,7 @@ textarea::placeholder {
   width: 200px;
   height: 50px;
   background-color: var(--accent-color);
+  border-radius: 4px;
 }
 .visually-hidden {
   width: 1px;
@@ -466,11 +480,9 @@ textarea::placeholder {
   overflow: hidden;
 }
 
-.form {
-  margin: 40px;
-}
+
 .form p {
-  padding-top: 34px;
+ 
   margin-bottom: 12px;
 
   font-size: 20px;
@@ -489,7 +501,7 @@ textarea {
 .form-subscription {
   display: flex;
   align-items: flex-end;
-  margin-right: 216px;
+  /* margin-right: 216px; */
 }
 
 .button.subscription {
@@ -535,6 +547,8 @@ textarea {
 }
 
 .subscription-object label {
+  font-family: inherit;
+  font-weight: 700;
   font-style: normal;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -545,8 +559,8 @@ textarea {
 }
 
 .subscription-object input::placeholder {
+  
   font-style: normal;
-
   font-size: 16px;
   line-height: calc(20 / 16);
   letter-spacing: 0.03em;
@@ -858,8 +872,9 @@ justify-content: center; */
 
 /* footer */
 
-.container.footer {
-  align-items: baseline;
+.footer .container{
+  display: flex;
+  justify-content: space-between;
 }
 
 .adress a {
